@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .bg-menu{
+            background-color: #1B2021;
+            color: #F6F7F8;
+        }
+        .alert{
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            margin: 20px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="bg-menu mb-5">
+        <header class="text-center py-3">
+            <p class="fs-2">Ceny na stacji Orlen</p>
+            <p class="fs-6 fw-lighter">Warszawska 246, 60-055 Poznań</p>
+        </header>
+    </div>
+    <div class="container">
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <div class="alert alert-info" role="alert">
+        Ceny uaktualniane są codziennie o 18:00. <a href="mailto:cenypaliw@onet.pl"><u>Prześlij zdjęcie aktualnych cen.</u></a>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script>
+        const ctx = document.getElementById('myChart');
+      
+        new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: ['13.09', '14.09', '15.09', '16.09', '17.09', '18.09', '19.09', '20.09', '21.09', '22.09', '23.09', '24.09'],
+            datasets: [
+                {
+                    label: 'efecta 95',
+                    data: [6.37, 6.25],
+                    borderWidth: 1,
+                },
+                {
+                    label: 'efecta diesel',
+                    data: [],
+                    borderWidth: 1,
+                },
+                {
+                    label: 'lpg',
+                    data: [],
+                    borderWidth: 1,
+                },
+                {
+                    label: 'verva 98',
+                    data: [],
+                    borderWidth: 1,
+                },
+                {
+                    label: 'verva diesel',
+                    data: [],
+                    borderWidth: 1,
+                },
+            ]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
