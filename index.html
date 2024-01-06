@@ -1,84 +1,566 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ceny paliw Orlen</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <style>
-        .bg-menu{
-            background-color: #1B2021;
-            color: #F6F7F8;
-        }
-        .alert{
-            position: fixed;
-            bottom: 0;
-            right: 0;
-            margin: 20px;
-        }
-    </style>
-  </head>
-  <body>
-    <div class="bg-menu mb-5">
-        <header class="text-center py-3">
-            <p class="fs-2">Ceny na stacji Orlen</p>
-            <p class="fs-6 fw-lighter">Warszawska 246, 60-055 Poznań</p>
-        </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsywna Strona z Bootstrap</title>
+  <!-- Link do Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <style>
+    .badge{
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar z logo -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="T826.png" alt="Logo" height="30">
+    </a>
+    <h5>Kupony McDonald’s</h5>
+  </nav>
+
+  <!-- Zawartość strony -->
+  <div class="container mt-4">
+    <div class="row">
+      <!-- 4 kolumny -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="p-3">
+                <div class="row">
+                    <div class="col-9"><h5>1. McChicken + małe frytki + mały napój</h5></div>
+                    <div class="col-3"><span class="badge bg-danger">17,00 zł</span></div>
+                </div>
+                <img src="T826.png" class="img-fluid" style="margin: 20px 0;">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="#kupon1">Pokaż kod</button>
+                </div>
+            </div>
+            <div class="card-footer">
+                Ważność kuponu: 8.01-3.03.2024
+            </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="p-3">
+                <div class="row">
+                    <div class="col-9"><h5>2. Big Mac + małe frytki + mały napój</h5></div>
+                    <div class="col-3"><span class="badge bg-danger">17,00 zł</span></div>
+                </div>
+                <img src="T826.png" class="img-fluid" style="margin: 20px 0;">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="#kupon2">Pokaż kod</button>
+                </div>
+            </div>
+            <div class="card-footer">
+                Ważność kuponu: 8.01-3.03.2024
+            </div>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="p-3">
+                <div class="row">
+                    <div class="col-9"><h5>3. McDouble + średnie frytki + średni napój</h5></div>
+                    <div class="col-3"><span class="badge bg-danger">15,00 zł</span></div>
+                </div>
+                <img src="T826.png" class="img-fluid" style="margin: 20px 0;">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="#kupon3">Pokaż kod</button>
+                </div>
+            </div>
+            <div class="card-footer">
+                Ważność kuponu: 8.01-3.03.2024
+            </div>
+        </div>
+      </div>
+    <!-- 4 -->
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="p-3">
+                <div class="row">
+                    <div class="col-9"><h5>4. Cheeseburger + duże frytki</h5></div>
+                    <div class="col-3"><span class="badge bg-danger">10,00 zł</span></div>
+                </div>
+                <img src="T826.png" class="img-fluid" style="margin: 20px 0;">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="#kupon4">Pokaż kod</button>
+                </div>
+            </div>
+            <div class="card-footer">
+                Ważność kuponu: 8.01-3.03.2024
+            </div>
+        </div>
     </div>
-    <div class="container">
-        <canvas id="myChart"></canvas>
+    <!-- 5 -->
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="p-3">
+                <div class="row">
+                    <div class="col-9"><h5>5. 2 x (McChicken + małe frytki + mały napój)</h5></div>
+                    <div class="col-3"><span class="badge bg-danger">34,00 zł</span></div>
+                </div>
+                <img src="T826.png" class="img-fluid" style="margin: 20px 0;">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="#kupon5">Pokaż kod</button>
+                </div>
+            </div>
+            <div class="card-footer">
+                Ważność kuponu: 8.01-3.03.2024
+            </div>
+        </div>
+    </div>
+    <!-- 6 -->
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="p-3">
+                <div class="row">
+                    <div class="col-9"><h5>6. 2 x (Big Mac + małe frytki + mały napój)</h5></div>
+                    <div class="col-3"><span class="badge bg-danger">34,00 zł</span></div>
+                </div>
+                <img src="T826.png" class="img-fluid" style="margin: 20px 0;">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="#kupon6">Pokaż kod</button>
+                </div>
+            </div>
+            <div class="card-footer">
+                Ważność kuponu: 8.01-3.03.2024
+            </div>
+        </div>
+    </div>
+    <!-- 7 -->
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="p-3">
+                <div class="row">
+                    <div class="col-9"><h5>7. 2 x (McDouble + średnie frytki + średni napój)</h5></div>
+                    <div class="col-3"><span class="badge bg-danger">30,00 zł</span></div>
+                </div>
+                <img src="T826.png" class="img-fluid" style="margin: 20px 0;">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="#kupon7">Pokaż kod</button>
+                </div>
+            </div>
+            <div class="card-footer">
+                Ważność kuponu: 8.01-3.03.2024
+            </div>
+        </div>
+    </div>
+    <!-- 8 -->
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="p-3">
+                <div class="row">
+                    <div class="col-9"><h5>8. 2 x (Cheeseburger + duże frytki)</h5></div>
+                    <div class="col-3"><span class="badge bg-danger">20,00 zł</span></div>
+                </div>
+                <img src="T826.png" class="img-fluid" style="margin: 20px 0;">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="#kupon8">Pokaż kod</button>
+                </div>
+            </div>
+            <div class="card-footer">
+                Ważność kuponu: 8.01-3.03.2024
+            </div>
+        </div>
+    </div>
+    <!-- 9 -->
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="p-3">
+                <div class="row">
+                    <div class="col-9"><h5>9. McWrap Klasyczny + średnie frytki</h5></div>
+                    <div class="col-3"><span class="badge bg-danger">17,50 zł</span></div>
+                </div>
+                <img src="T826.png" class="img-fluid" style="margin: 20px 0;">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="#kupon9">Pokaż kod</button>
+                </div>
+            </div>
+            <div class="card-footer">
+                Ważność kuponu: 8.01-3.03.2024
+            </div>
+        </div>
+    </div>
+    <!-- 10 -->
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="p-3">
+                <div class="row">
+                    <div class="col-9"><h5>10. Drugi McZestaw WieśMac 50% taniej</h5></div>
+                    <div class="col-3"><span class="badge bg-danger">50%</span></div>
+                </div>
+                <img src="T826.png" class="img-fluid" style="margin: 20px 0;">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="#kupon10">Pokaż kod</button>
+                </div>
+            </div>
+            <div class="card-footer">
+                Ważność kuponu: 8.01-3.03.2024
+            </div>
+        </div>
+    </div>
+    <!-- 11 -->
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="p-3">
+                <div class="row">
+                    <div class="col-9"><h5>11. Przy zakupie McZestawu Powiększonego Big Mac - Happy Meal za 10 zł</h5></div>
+                    <div class="col-3"><span class="badge bg-danger">10,00 zł</span></div>
+                </div>
+                <img src="T826.png" class="img-fluid" style="margin: 20px 0;">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="#kupon11">Pokaż kod</button>
+                </div>
+            </div>
+            <div class="card-footer">
+                Ważność kuponu: 8.01-3.03.2024
+            </div>
+        </div>
+    </div>
+    <!-- 12 -->
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="p-3">
+                <div class="row">
+                    <div class="col-9"><h5>12. Kup 2 x McZestaw Powiększony, a Happy Meal otrzymasz GRATIS</h5></div>
+                    <div class="col-3"><span class="badge bg-danger">0,00 zł</span></div>
+                </div>
+                <img src="T826.png" class="img-fluid" style="margin: 20px 0;">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="#kupon12">Pokaż kod</button>
+                </div>
+            </div>
+            <div class="card-footer">
+                Ważność kuponu: 8.01-3.03.2024
+            </div>
+        </div>
+    </div>
+    <!-- 13 -->
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="p-3">
+                <div class="row">
+                    <div class="col-9"><h5>13. Kurczak McNuggets 20szt. + 2 x małe frytki</h5></div>
+                    <div class="col-3"><span class="badge bg-danger">32,00 zł</span></div>
+                </div>
+                <img src="T826.png" class="img-fluid" style="margin: 20px 0;">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="#kupon13">Pokaż kod</button>
+                </div>
+            </div>
+            <div class="card-footer">
+                Ważność kuponu: 8.01-3.03.2024
+            </div>
+        </div>
+    </div>
+    <!-- 14 -->
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="p-3">
+                <div class="row">
+                    <div class="col-9"><h5>14. McMuffin Farmerski + mała kawa czarna albo z mlekiem</h5></div>
+                    <div class="col-3"><span class="badge bg-danger">10,50 zł</span></div>
+                </div>
+                <img src="T826.png" class="img-fluid" style="margin: 20px 0;">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="#kupon14">Pokaż kod</button>
+                </div>
+            </div>
+            <div class="card-footer">
+                Ważność kuponu: 8.01-3.03.2024
+            </div>
+        </div>
+    </div>
+    <!-- 15 -->
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="p-3">
+                <div class="row">
+                    <div class="col-9"><h5>15. Średnie frytki</h5></div>
+                    <div class="col-3"><span class="badge bg-danger">5,00 zł</span></div>
+                </div>
+                <img src="T826.png" class="img-fluid" style="margin: 20px 0;">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="#kupon15">Pokaż kod</button>
+                </div>
+            </div>
+            <div class="card-footer">
+                Ważność kuponu: 8.01-3.03.2024
+            </div>
+        </div>
+    </div>
+    <!-- 16 -->
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="p-3">
+                <div class="row">
+                    <div class="col-9"><h5>16. Duża kawa czarna albo z mlekiem</h5></div>
+                    <div class="col-3"><span class="badge bg-danger">5,00 zł</span></div>
+                </div>
+                <img src="T826.png" class="img-fluid" style="margin: 20px 0;">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="#kupon16">Pokaż kod</button>
+                </div>
+            </div>
+            <div class="card-footer">
+                Ważność kuponu: 8.01-3.03.2024
+            </div>
+        </div>
     </div>
 
-    <div class="alert alert-info" role="alert">
-        <a href="mailto:cenypaliw@onet.pl"><u>Prześlij zdjęcie aktualnych cen.</u></a>
+    </div>
+  </div>
+
+
+    <!-- 1 -->
+    <div class="modal fade" id="kupon1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 75%;">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">1. McChicken + małe frytki + mały napój</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zamknij"></button>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+            <img src="img/1_12663828.png" class="img" style="max-width: 75%; display: block; margin: 0 auto;">
+        </div>
+        </div>
+    </div>
     </div>
     
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- 2 -->
+    <div class="modal fade" id="kupon2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 75%;">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">2. Big Mac + małe frytki + mały napój</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zamknij"></button>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+            <img src="img/2_20672201.png" class="img" style="max-width: 75%; display: block; margin: 0 auto;">
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="modal fade" id="kupon3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 75%;">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">3. McDouble + średnie frytki + średni napój</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zamknij"></button>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+            <img src="img/3_21103995.png" class="img" style="max-width: 75%; display: block; margin: 0 auto;">
+        </div>
+        </div>
+    </div>
+    </div>
     
-    <script>
-        const ctx = document.getElementById('myChart');
-      
-        new Chart(ctx, {
-          type: 'line',
-          data: {
-            labels: ['13.09', '14.09', '15.09', '16.09', '17.09', '18.09', '19.09', '20.09', '21.09', '22.09', '23.09', '24.09'],
-            datasets: [
-                {
-                    label: 'efecta 95',
-                    data: [6.37, 6.25, 6.15, , 6.12, 6.11],
-                    borderWidth: 1,
-                },
-                {
-                    label: 'efecta diesel',
-                    data: [, , 6.08, 6.08, , 6.04],
-                    borderWidth: 1,
-                },
-                {
-                    label: 'lpg',
-                    data: [, , 2.96, , , 2.96],
-                    borderWidth: 1,
-                },
-                {
-                    label: 'verva 98',
-                    data: [, , 6.75, , , 6.71],
-                    borderWidth: 1,
-                },
-                {
-                    label: 'verva diesel',
-                    data: [, , 6.28, , , 6.24],
-                    borderWidth: 1,
-                },
-            ]
-          },
-          options: {
-            scales: {
-              y: {
-                beginAtZero: true
-              }
-            }
-          }
-        });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  </body>
+    <!-- 4 -->
+    <div class="modal fade" id="kupon4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 75%;">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">4. Cheeseburger + duże frytki</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zamknij"></button>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+            <img src="img/4_14453724.png" class="img" style="max-width: 75%; display: block; margin: 0 auto;">
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="modal fade" id="kupon5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 75%;">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">5. 2 x (McChicken + małe frytki + mały napój)</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zamknij"></button>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+            <img src="img/5_21834639.png" class="img" style="max-width: 75%; display: block; margin: 0 auto;">
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="modal fade" id="kupon6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 75%;">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">6. 2 x (Big Mac + małe frytki + mały napój)</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zamknij"></button>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+            <img src="img/6_27388198.png" class="img" style="max-width: 75%; display: block; margin: 0 auto;">
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="modal fade" id="kupon7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 75%;">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">7. 2 x (McDouble + średnie frytki + średni napój)</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zamknij"></button>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+            <img src="img/7_42352112.png" class="img" style="max-width: 75%; display: block; margin: 0 auto;">
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="modal fade" id="kupon8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 75%;">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">8. 2 x (Cheeseburger + duże frytki)</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zamknij"></button>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+            <img src="img/8_55124997.png" class="img" style="max-width: 75%; display: block; margin: 0 auto;">
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="modal fade" id="kupon9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 75%;">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">9. McWrap Klasyczny + średnie frytki</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zamknij"></button>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+            <img src="img/9_62154444.png" class="img" style="max-width: 75%; display: block; margin: 0 auto;">
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="modal fade" id="kupon10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 75%;">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">10. Drugi McZestaw WieśMac 50% taniej</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zamknij"></button>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+            <img src="img/10_63445336.png" class="img" style="max-width: 75%; display: block; margin: 0 auto;">
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- 11 -->
+    <div class="modal fade" id="kupon11" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 75%;">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">11. Przy zakupie McZestawu Powiększonego Big Mac - Happy Meal za 10 zł</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zamknij"></button>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+            <img src="img/11_66535539.png" class="img" style="max-width: 75%; display: block; margin: 0 auto;">
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- 12 -->
+    <div class="modal fade" id="kupon12" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 75%;">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">12. Kup 2 x McZestaw Powiększony, a Happy Meal otrzymasz GRATIS</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zamknij"></button>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+            <img src="img/12_72719824.png" class="img" style="max-width: 75%; display: block; margin: 0 auto;">
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- 13 -->
+    <div class="modal fade" id="kupon13" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 75%;">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">13. Kurczak McNuggets 20szt. + 2 x małe frytki</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zamknij"></button>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+            <img src="img/13_77263513.png" class="img" style="max-width: 75%; display: block; margin: 0 auto;">
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- 14 -->
+    <div class="modal fade" id="kupon14" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 75%;">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">14. McMuffin Farmerski + mała kawa czarna albo z mlekiem</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zamknij"></button>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+            <img src="img/14_88273662.png" class="img" style="max-width: 75%; display: block; margin: 0 auto;">
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- 15 -->
+    <div class="modal fade" id="kupon15" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 75%;">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">15. Średnie frytki</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zamknij"></button>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+            <img src="img/15_92019928.png" class="img" style="max-width: 75%; display: block; margin: 0 auto;">
+        </div>
+        </div>
+    </div>
+    </div>
+
+     <!-- 16 -->
+    <div class="modal fade" id="kupon16" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 75%;">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">16. Duża kawa czarna albo z mlekiem</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zamknij"></button>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+            <img src="img/16_92831902.png" class="img" style="max-width: 75%; display: block; margin: 0 auto;">
+        </div>
+        </div>
+    </div>
+    </div>
+
+
+  <!-- Linki do Bootstrap JavaScript i jQuery (opcjonalne, ale potrzebne do niektórych funkcji Bootstrap) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
